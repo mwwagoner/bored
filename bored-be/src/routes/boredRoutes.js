@@ -1,11 +1,12 @@
-import { addNewGame, getGameById, getGames } from "../controllers/boredControllers";
+import { addNewGame, getGameById, getGames, updateGameById, deleteGameById } from "../controllers/boredControllers";
 
 const routes = (app) => {
     app.route('/api/addGame')
         .post(addNewGame)
     app.route('/api/game/:gameId')
         .get(getGameById)
-        .put(updateGame)
+        .put(updateGameById)
+        .delete(deleteGameById)
     app.route('/api/games')
         .get(getGames)
 }

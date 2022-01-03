@@ -15,7 +15,16 @@ export const addNewGame = (req, res) => {
 };
 
 export const getGameById = (req, res) => {
-    Bored.findOne({_id: req.params.gameId}, (err, Game)=> {
+    Bored.findOne({_id: req.params.gameId}, (err, Game) => {
+        if(err) {
+            res.send(err)
+        }
+        res.json(Game)
+    })
+};
+
+export const updateGameById = (req, res) => {
+    Bored.findOneAndUpdate({_id: req.params.gameId}, req.body, {new: true}, (err, Game) => {
         if(err) {
             res.send(err)
         }
