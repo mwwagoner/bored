@@ -22,3 +22,12 @@ export const getGameById = (req, res) => {
         res.json(Game)
     })
 };
+
+export const getGames = (req, res) => {
+    Bored.find({}, (err, Games) => {
+        if(err) {
+            res.send(err)
+        }
+        res.send(Games)
+    })
+};
