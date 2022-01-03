@@ -32,6 +32,15 @@ export const updateGameById = (req, res) => {
     })
 };
 
+export const deleteGameById = (req, res) => {
+    Bored.findOneAndDelete({_id: req.params.gameId}, (err, Game) => {
+        if(err) {
+            res.send(err)
+        }
+        res.send('Game deleted')
+    })
+};
+
 export const getGames = (req, res) => {
     Bored.find({}, (err, Games) => {
         if(err) {
