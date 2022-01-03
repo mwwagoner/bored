@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import { MongoTopologyClosedError } from "mongodb";
+import cors from "cors";
+import routes from "./routes/boredRoutes";
 
 // const express = require('express');
 const app = express();
@@ -16,6 +17,9 @@ mongoose.connect('mongodb://localhost/bored', {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
+
+routes(app)
 
 app.get('/', (req,res) => {
     res.send (`Server listening on port ${port}`);
