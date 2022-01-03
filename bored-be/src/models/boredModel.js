@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const { Schema } = mongoose;
+const Schema = mongoose.Schema;
 
-const boredSchema = new Schema({
+export const boredSchema = new Schema({
     title: String,
     author: String,
     publisher: String,
