@@ -13,3 +13,12 @@ export const addNewGame = (req, res) => {
         res.json(Bored)
     })
 };
+
+export const getGameById = (req, res) => {
+    Bored.findOne({_id: req.params.gameId}, (err, Game)=> {
+        if(err) {
+            res.send(err)
+        }
+        res.json(Game)
+    })
+};
