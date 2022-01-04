@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import ListGames from "../components/ListGames"
+import React from "react";
+
 
 const HomePage = () => {
     return(
