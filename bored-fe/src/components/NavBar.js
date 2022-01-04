@@ -8,6 +8,9 @@ export const NavBar = () => {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
+                <li>
+                    <Link to="#">Games</Link>
+                </li>
             </ul>
         </nav>
     )
