@@ -7,6 +7,7 @@ import {
 import './App.css';
 import HomePage from './pages/HomePage';
 import { NavBar } from "./components/NavBar";
+import GamesListPage from "./pages/GamesListPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} exact />
+          <Route path="/games-list" element={<GamesListPage />} exact />
         </Routes>
       </div>
     </Router>
