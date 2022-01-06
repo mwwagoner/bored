@@ -7,7 +7,7 @@ const ListGames = ({ gamesList }) => {
             {gamesListArray.map((game) => {
                 let title = game.title
                 return(
-                    <li>{title}</li>
+                    <li key={game._id}>{title}</li>
                 )
             })}
         </ul>
