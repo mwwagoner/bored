@@ -8,6 +8,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import { NavBar } from "./components/NavBar";
 import GamesListPage from "./pages/GamesListPage";
+import GameInfoPage from "./pages/GameInfoPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} exact />
           <Route path="/games-list" element={<GamesListPage />} exact />
+          <Route path="/games/:gameId" element={<GameInfoPage />} exact />
         </Routes>
       </div>
     </Router>
