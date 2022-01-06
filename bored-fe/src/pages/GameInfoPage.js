@@ -20,15 +20,8 @@ const GameInfoPage = () => {
 
     return(
         <>
-            <h1>{currentGame.title}</h1>
-            <ul>
-                <li>Author: {currentGame.author}</li>
-                <li>Publisher: {currentGame.publisher}</li>
-                <li>Players: {currentGame.minPlayers} - {currentGame.maxPlayers}</li>
-                <li>Playtime: {currentGame.minPlayTime} minutes</li>
-                <li>Ages: {currentGame.playerAges}+</li>
-                <li>Number of plays: {currentGame.numberOfPlays}</li>
-            </ul>
+            <h1>Game Info</h1>
+            <ShowGameInfo currentGame={currentGame} />
         </>
     )
 }
