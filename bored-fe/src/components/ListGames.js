@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListGames = ({ gamesList }) => {
     const gamesListArray = gamesList;
@@ -7,7 +8,9 @@ const ListGames = ({ gamesList }) => {
             {gamesListArray.map((game) => {
                 let title = game.title
                 return(
-                    <li key={game._id}>{title}</li>
+                    <li key={game._id}>
+                        <Link to={`/games/${game._id}`}>{title}</Link>
+                    </li>
                 )
             })}
         </ul>
